@@ -3,4 +3,5 @@
 using SeaSharp;
 
 var seaport = new SeaPort();
-seaport.GetAsset("0xee356e6a8529bef1fef57824322af495ddbdcf64", "5");
+var bundle = await seaport.GetBundle("3x-save-gas-our-planet-is-dying-LpP");
+Console.WriteLine(bundle);

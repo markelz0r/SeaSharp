@@ -5,24 +5,17 @@ namespace SeaSharp;
 
 public class ApiClient
 {
-   private static readonly HttpClient Client = new();
+   private readonly HttpClient _client = new();
 
    public ApiClient(string apiKey)
    {
-      Client.DefaultRequestHeaders.Add("X-API-KEY", apiKey);
+      _client.DefaultRequestHeaders.Add("X-API-KEY", apiKey);
    }
 
-   public static async Task<T> Get<T>(string url)
+   public async Task<string> Get<T>(string url)
    {
-      var response = await Client.GetAsync(CommonValues.API_BASE_MAINNET+url);
+      var response = await _client.GetAsync(CommonValues.API_BASE_MAINNET+url);
       response.EnsureSuccessStatusCode();
-      var responseString = await response.Content.ReadAsStringAsync();
-      
-      var parsedObject = JsonSerializer.Deserialize<T>(responseString);
-      
-      if (parsedObject == null)
-         throw new InvalidOperationException();
-
-      return parsedObject;
+      return await response.Content.ReadAsStringAsync();
    }
 }

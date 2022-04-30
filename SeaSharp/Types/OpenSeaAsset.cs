@@ -9,9 +9,9 @@ public class OpenSeaAsset
    public string Name { get; set; }
    public string Description { get; set; }
    public OpenSeaAccount Owner { get; set; }
-   public IEnumerable<Order> Orders { get; set; }
-   public IEnumerable<Order> BuyOrders { get; set; }
-   public IEnumerable<Order> SellOrders { get; set; }
+   public List<Order> Orders { get; set; }
+   public List<Order> BuyOrders { get; set; }
+   public List<Order> SellOrders { get; set; }
    public bool IsPresale { get; set; }
    public string ImageUrl { get; set; }
    public string ImagePreviewUrl { get; set; }
