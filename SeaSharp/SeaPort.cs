@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using SeaSharp.Json;
 using SeaSharp.Types;
 
 namespace SeaSharp;
@@ -22,9 +23,13 @@ public class SeaPort : ISeaPort
    {
       var tokenString = tokenId != string.Empty ? tokenId : "0";
       var url = $"{CommonValues.API_PATH}/asset/${tokenAddress}/{tokenString}";
-
+      var options = new JsonSerializerOptions()
+      {
+         PropertyNamingPolicy = new LowerCaseNamingPolicy()
+      };
+      
       var response = await _apiClient.Get(url);
-      var asset = JsonSerializer.Deserialize<OpenSeaAsset>(response);
+      var asset = JsonSerializer.Deserialize<OpenSeaAsset>(response, options);
 
       if (asset == null)
          throw new Exception();
@@ -40,9 +45,13 @@ public class SeaPort : ISeaPort
    public async Task<OpenSeaAssetBundle> GetBundle(string slug)
    {
       var url = $"{CommonValues.API_PATH}/bundle/{slug}";
+      var options = new JsonSerializerOptions()
+      {
+         PropertyNamingPolicy = new LowerCaseNamingPolicy()
+      };
 
       var response = await _apiClient.Get(url);
-      var bundle = JsonSerializer.Deserialize<OpenSeaAssetBundle>(response);
+      var bundle = JsonSerializer.Deserialize<OpenSeaAssetBundle>(response, options);
       
       if (bundle == null)
          throw new Exception();

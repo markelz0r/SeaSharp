@@ -4,5 +4,6 @@ public enum AuctionType
 {
    Dutch,
    English,
-   MinPrice
+   MinPrice,
+   Unknown
 }

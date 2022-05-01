@@ -19,7 +19,7 @@ public class OpenSeaAsset
    public string ImageUrlThumbnail { get; set; }
    public string Permalink { get; set; }
    public string ExternalLink { get; set; }
-   public JsonObject[] Trairs { get; set; }
+   public JsonObject[] Traits { get; set; }
    public int NumSales { get; set; }
    public AssetEvent LastSale { get; set; }
    public string BackgroundColor { get; set; }

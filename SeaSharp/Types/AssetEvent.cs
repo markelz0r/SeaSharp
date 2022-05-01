@@ -4,7 +4,7 @@ using SeaSharp.Types.Enums;
 
 namespace SeaSharp.Types;
 
-public interface AssetEvent
+public class AssetEvent
 {
    [JsonConverter(typeof(AssetEventTypeJsonConverter))]
    public AssetEventType EventType { get; set; }

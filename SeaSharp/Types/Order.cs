@@ -1,16 +1,11 @@
 ﻿using System.Numerics;
+using SeaSharp.Types.Interfaces;
 using SeaSharp.Types.Wyvern;
 
 namespace SeaSharp.Types;
 
 public class Order : IECSignature, IUnsignedOrder
 {
-   public Order()
-   {
-      // TODO Probably needs a custom converter due to complexity
-      throw new NotImplementedException();
-   }
-   
    public BigInteger CreatedTime { get; set; }
    public BigInteger CurrentPrice { get; set; }
    public BigInteger CurrentBounty { get; set; }

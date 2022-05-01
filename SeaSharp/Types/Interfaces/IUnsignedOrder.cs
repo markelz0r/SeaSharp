@@ -1,4 +1,4 @@
-﻿namespace SeaSharp.Types;
+﻿namespace SeaSharp.Types.Interfaces;
 
 public interface IUnsignedOrder : IUnhashedOrder
 {

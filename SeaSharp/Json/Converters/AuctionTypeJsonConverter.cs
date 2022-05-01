@@ -1,6 +1,5 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
-using SeaSharp.Types;
 using SeaSharp.Types.Enums;
 
 namespace SeaSharp.Json.Converters;
@@ -15,7 +14,7 @@ public class AuctionTypeJsonConverter : JsonConverter<AuctionType>
          "dutch" => AuctionType.Dutch,
          "english" => AuctionType.English,
          "min_price" => AuctionType.MinPrice,
-         _ => throw new ArgumentOutOfRangeException()
+         _ => AuctionType.Unknown
       };
    }
 
