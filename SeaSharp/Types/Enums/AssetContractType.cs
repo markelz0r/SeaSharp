@@ -1,4 +1,4 @@
-﻿namespace SeaSharp.Types;
+﻿namespace SeaSharp.Types.Enums;
 
 public enum AssetContractType
 {

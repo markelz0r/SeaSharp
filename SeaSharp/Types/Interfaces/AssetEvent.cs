@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
-using SeaSharp.Types.Converters;
+using SeaSharp.Json.Converters;
+using SeaSharp.Types.Enums;
 
 namespace SeaSharp.Types;
 

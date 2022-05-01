@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace SeaSharp;
+namespace SeaSharp.Json;
 
 public class LowerCaseNamingPolicy : JsonNamingPolicy
 {

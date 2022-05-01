@@ -1,7 +1,8 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
+using SeaSharp.Types;
 
-namespace SeaSharp.Types.Converters;
+namespace SeaSharp.Json.Converters;
 
 public class AssetEventTypeJsonConverter : JsonConverter<AssetEventType>
 {

@@ -1,7 +1,9 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
+using SeaSharp.Types;
+using SeaSharp.Types.Enums;
 
-namespace SeaSharp.Types.Converters;
+namespace SeaSharp.Json.Converters;
 
 public class AuctionTypeJsonConverter : JsonConverter<AuctionType>
 {
