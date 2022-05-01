@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+﻿using System.Text.Json.Nodes;
 
 namespace SeaSharp.Types;
 
@@ -17,12 +17,14 @@ public class OpenSeaAsset
    public string ImagePreviewUrl { get; set; }
    public string ImageUrlOriginal { get; set; }
    public string ImageUrlThumbnail { get; set; }
-   public string OpenseaLink { get; set; }
+   public string Permalink { get; set; }
    public string ExternalLink { get; set; }
-   public object[] Trairs { get; set; }
+   public JsonObject[] Trairs { get; set; }
    public int NumSales { get; set; }
    public AssetEvent LastSale { get; set; }
    public string BackgroundColor { get; set; }
-   public BigInteger TransferFee { get; set; }
+   public string TransferFee { get; set; }
    public OpenSeaFungibleToken TransferFeePaymentToken { get; set; }
+   
+   
 }
