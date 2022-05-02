@@ -1,8 +1,15 @@
-﻿namespace SeaSharp.Types;
+﻿using System.Text.Json.Serialization;
+using SeaSharp.Json.Converters;
+
+namespace SeaSharp.Types;
 
 public class OpenSeaFungibleToken : Token
 {
    public string ImageUrl { get; set; }
-   public string EthPrice { get; set; }
-   public string UsdPrice { get; set; }
+   
+   [JsonConverter(typeof(StringDecimalJsonConverter))]
+   public decimal EthPrice { get; set; }
+   
+   [JsonConverter(typeof(StringDecimalJsonConverter))]
+   public decimal UsdPrice { get; set; }
 }

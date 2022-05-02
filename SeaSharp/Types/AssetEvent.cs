@@ -8,7 +8,7 @@ public class AssetEvent
 {
    [JsonConverter(typeof(AssetEventTypeJsonConverter))]
    public AssetEventType EventType { get; set; }
-   public DateTime EventTimeStamp { get; set; }
+   public DateTime EventTimestamp { get; set; }
    
    [JsonConverter(typeof(AuctionTypeJsonConverter))]
    public AuctionType AuctionType { get; set; }

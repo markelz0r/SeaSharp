@@ -22,7 +22,7 @@ public class SeaPort : ISeaPort
    public async Task<OpenSeaAsset> GetAsset(string tokenAddress, string tokenId)
    {
       var tokenString = tokenId != string.Empty ? tokenId : "0";
-      var url = $"{CommonValues.API_PATH}/asset/${tokenAddress}/{tokenString}";
+      var url = $"{CommonValues.API_PATH}/asset/{tokenAddress}/{tokenString}";
       var options = new JsonSerializerOptions()
       {
          PropertyNamingPolicy = new LowerCaseNamingPolicy()

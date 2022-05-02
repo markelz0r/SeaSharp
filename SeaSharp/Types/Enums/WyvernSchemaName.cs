@@ -8,4 +8,5 @@ public enum WyvernSchemaName
    ERC1155,
    LegacyEnjin,
    ENSShortNameAuction,
+   CryptoPunks
 }
